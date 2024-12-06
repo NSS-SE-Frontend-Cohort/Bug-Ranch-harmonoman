@@ -25,10 +25,14 @@ console.log(`
 
 console.log(`You will be accompanying ${drovers.length} drovers as they drive ${cattleToDrive} cattle to Old Red's Ranch for grazing`)
 console.log(`\nThe herd is made of up the following cattle (only their breed is shown):`)
-// console.log(`${cattle}\n`)
+let cattleList = ''
 for (const breed of cattle) {
-    console.log(`\t ${breed.breed},`)
+    cattleList = cattleList + breed.breed + ", "
 }
+const cattleListNoComma = cattleList.substring(0, cattleList.length - 2)
+console.log(cattleListNoComma)
+
+console.log("")
 
 console.log("Here is the team of drovers you will be joining")
 for (const drover of drovers) {
